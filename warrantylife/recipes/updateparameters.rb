@@ -2,20 +2,23 @@ require 'aws-sdk'
 
 s3 = AWS::S3.new
 
-# Set bucket and object name
-obj = s3.buckets['wl-opsworks-config'].objects['parameters_ops.yml']
+node[:deploy].each do |application, deploy|
 
-# Read content to variable
-file_content = obj.read
+  # Set bucket and object name
+  obj = s3.buckets['wl-opsworks-config'].objects['parameters_ops.yml']
 
-# Log output (optional)
-Chef::Log.info(file_content)
+  # Read content to variable
+  file_content = obj.read
 
-# Write content to file
-file "#{deploy[:deploy_to]}/app/config/parameters_ops.yml" do
-  owner 'root'
-  group 'root'
-  mode '0755'
-  content file_content
-  action :create
+  # Log output (optional)
+  # Chef::Log.info(file_content)
+
+  # Write content to file
+  file File.join(deploy[:deploy_to], 'shared', 'config', 'parameters_ops.yml') do
+    owner 'deploy'
+    group 'www-data'
+    mode '0755'
+    content file_content
+    action :create
+  end
 end
