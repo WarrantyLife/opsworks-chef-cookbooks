@@ -12,7 +12,7 @@ file_content = obj.read
 Chef::Log.info(file_content)
 
 # Write content to file
-file '#{deploy[:deploy_to]}/app/config/parameters_ops.yml' do
+file "#{deploy[:deploy_to]}/app/config/parameters_ops.yml" do
   owner 'root'
   group 'root'
   mode '0755'
