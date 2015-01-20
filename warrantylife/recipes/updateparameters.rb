@@ -14,7 +14,7 @@ node[:deploy].each do |application, deploy|
   # Chef::Log.info(file_content)
 
   # Write content to file
-  file File.join(deploy[:deploy_to], 'shared', 'config', 'parameters_ops.yml') do
+  file File.join(deploy[:deploy_to], 'current', 'app', 'config', 'parameters_ops.yml') do
     owner 'deploy'
     group 'www-data'
     mode '0755'
