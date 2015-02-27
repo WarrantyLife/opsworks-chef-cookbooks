@@ -1,9 +1,9 @@
-# AWS OpstWorks PHP Cookbooks. 
+# WarrantyLife OpsWorks PHP Cookbooks. 
 
 # Summary
 > "OpsWorks is a DevOps solution for managing the coplete application lifecycle, 
 > including resource provisioning, configuration management, applcation deployment 
-> software updates, monitori9ng and access cotrol."
+> software updates, monitoring and access cotrol."
 
 This repository contains a small collection of recipes to help setup PHP application in OpsWorks.
 Currently two PHP frameworks are supported: [FuelPHP](http://fuelphp.com) and [Symfony 2.x](http://symfony.com).
