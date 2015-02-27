@@ -7,3 +7,6 @@
 [submodule "build-essential"]
 	path = build-essential
 	url = git@github.com:opscode-cookbooks/build-essential.git
+[submodule "cookbook-elasticsearch"]
+	path = cookbook-elasticsearch
+	url = https://github.com/elasticsearch/cookbook-elasticsearch
