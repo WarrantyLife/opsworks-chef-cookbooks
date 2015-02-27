@@ -9,7 +9,10 @@
 	url = git@github.com:opscode-cookbooks/build-essential.git
 [submodule "cookbook-elasticsearch"]
 	path = elasticsearch
-	url = https://github.com/elasticsearch/cookbook-elasticsearch
+	url = git@github.com:elasticsearch/cookbook-elasticsearch.git
 [submodule "monit"]
 	path = monit
 	url = git://github.com/apsoto/monit.git
+[submodule "java"]
+	path = java
+	url = git@github.com:agileorbit-cookbooks/java.git
